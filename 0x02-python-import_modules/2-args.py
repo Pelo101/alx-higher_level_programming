@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    founder = ("Quincy", "Lucy", "Rob")
-    count = 0
-for elements in founder:
+    import sys
+    count = len(sys.argv)
+    print("{} arguments:".format(count))
+for elements in sys.argv:
     count += 1
-    print('{}:{}'.format(count, elements))
+print('{}:{}'.format(sys.argv.index(elements), elements))
