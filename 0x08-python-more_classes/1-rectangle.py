@@ -34,6 +34,7 @@ def width(self):
     """
     return self.__width
 
+
 @width.setter
 def width(self, value):
 
@@ -56,6 +57,7 @@ if width > 0:
     raise ValueError('width must be >= 0')
 return self.__width = value
 
+
 @property
 def height(self):
 
@@ -63,6 +65,7 @@ def height(self):
       Function defines height of a rectangle.
     """
     return self.__height
+
 
 @height.setter
 def height(self, value):
@@ -75,9 +78,11 @@ def height(self, value):
            Raises:
                  TypeError: if height is not an integer.
                  ValueError: if height is >= 0.
-    """
-if type(height) is not(height,int):
-     raise TypeError('height must be an integer')
-if  height > 0:
-     raise ValueError('height must be >= 0')
-     return self.__height = value
+   """
+
+
+if type(height) is not(height, int):
+    raise TypeError('height must be an integer')
+if height > 0:
+    raise ValueError('height must be >= 0')
+    return self.__height = value
