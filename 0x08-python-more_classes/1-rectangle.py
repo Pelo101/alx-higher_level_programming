@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-This module defines a Rectangle
-"""
+"""This module defines a Rectangle"""
 
 
 class Rectangle:
@@ -11,8 +9,7 @@ class Rectangle:
 
 def __init__(self, width=0, height=0):
 
-    """
-    This function defines a Rectangle
+    """This function defines a Rectangle
     Args:
         width: width of rectangle
         heigth: height of rectangle
@@ -29,17 +26,14 @@ def __init__(self, width=0, height=0):
 @property
 def width(self):
 
-    """
-    defines the width of a rectangle.
-    """
+    """defines the width of a rectangle"""
     return self.__width
 
 
 @width.setter
 def width(self, value):
 
-    """
-       sets the value of the width
+    """sets the value of the width
        Args:
            width: width of the rectangle
            value: value of width
@@ -61,24 +55,21 @@ if width > 0:
 @property
 def height(self):
 
-    """
-      Function defines height of a rectangle.
-    """
+    """Function defines height of a rectangle"""
     return self.__height
 
 
 @height.setter
 def height(self, value):
 
-    """
-          Function sets the value of height.
+    """Function sets the value of height.
           Args:
               height: height of the rectangle
               value : value of height
            Raises:
                  TypeError: if height is not an integer.
                  ValueError: if height is >= 0.
-   """
+    """
 
 
 if type(height) is not(height, int):
