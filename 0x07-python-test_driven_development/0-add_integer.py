@@ -1,0 +1,34 @@
+#!/usr/bin/python3
+"""This module computes and returns the summ of two numbers.
+
+ """
+
+
+def add(a, b=98):
+
+    """This function computes the sum of two integers and or floats.
+    Args:
+
+    a: the first number
+    b: the second number
+
+    Raises:
+
+    TypeError: if a and b is not an integer or float.
+
+    Return:
+
+    Sum of two numbers.
+
+    """
+
+
+if a is not isinstance(a, int) and not isinstance(a, float):
+    raise TypeError("a must be an integer")
+if b is not isinstance(b, int) and not isinstance(b, float):
+    raise TypeError("b must be an integer")
+
+a = int(a)
+b = int(b)
+
+return a + b
