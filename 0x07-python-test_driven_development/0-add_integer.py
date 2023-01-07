@@ -6,7 +6,7 @@ This module computes and returns the summ of two numbers.
 """
 
 
-def add(a, b=98):
+def add_integer(a, b=98):
     """ Function computes the sum of two integers and or floats.
 
     Args:
