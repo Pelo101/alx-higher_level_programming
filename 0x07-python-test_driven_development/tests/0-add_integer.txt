@@ -152,7 +152,7 @@ Case Overflow:
 
 
 
-    >>> add_integer(float('inf'), 0)
+    >>> add_integer(float('inf'), 2)
 
     Traceback (most recent call last):
 
@@ -180,7 +180,7 @@ Case NaN:
 
 
 
-    >>> add_integer(0, float('nan'))
+    >>> add_integer(2, float('nan'))
 
     Traceback (most recent call last):
 
