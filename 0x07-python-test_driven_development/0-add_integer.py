@@ -7,8 +7,8 @@ This module computes and returns the summ of two numbers.
 
 
 def add(a, b=98):
-
     """This function computes the sum of two integers and or floats.
+
     Args:
 
     a: the first number
