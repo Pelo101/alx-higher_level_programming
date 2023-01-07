@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 
-This module prints a first name and surnanme
+This module prints a <first name> and <last name>
 
 
 """
@@ -9,7 +9,7 @@ This module prints a first name and surnanme
 
 def say_my_name(first_name, last_name=""):
     """
-  This function prints My name is <first name> <last name>
+  This function prints "My name is <first name> <last name>"
 
     Args:
         first_name: first name
@@ -27,9 +27,10 @@ def say_my_name(first_name, last_name=""):
     """
 
 
-if type(first_name) is not str:
+if type('first_name') is not str:
     raise TypeError("first_name must be string")
-if type(last_name) is not str:
+
+if type('last_name') is not str:
     raise TypeError("last_name must be string")
 
-print("My name is {} {}".format(first_name, last_name))
+print("My name is {} {}".format('first_name', 'last_name'))
