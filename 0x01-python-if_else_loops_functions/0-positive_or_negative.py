@@ -6,7 +6,7 @@ if (number == 0):
     print(f"{number:d} is zero")
 
 elif (number > 0):
-    print(f"{number:d} is positve")
+    print(f"{number:d} is positive")
 
 else:
     print(f"{number:d} is negative")
