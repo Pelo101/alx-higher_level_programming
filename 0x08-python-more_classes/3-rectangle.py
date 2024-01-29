@@ -49,6 +49,8 @@ class Rectangle:
 
     def __str__(self):
         """ Prints the rectangle with character #"""
+        empty_string = ""
+
         if self.__width == 0 or self.__height == 0:
-            print("")
+            return (empty_string)
         return("#" * self.__width + "\n") * self.__height
