@@ -79,14 +79,17 @@ class Rectangle(Base):
             print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
-        return f"[Rectangle]({id(self)}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return (
+                f"[Rectangle]({self.id})"
+                f"{self.__x}/{self.__y} - {self.__width}/{self.__height}"
+         )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigns argument to each attribute"""
-
         attributes = ['id', 'width', 'height', 'x', 'y']
-        for i, args in enumerate(args):
-            setattr(self, attributes[i], args)
 
-
-
+        for attr, value in zip(attributes, args):
+            if value is not None:
+                setattr(self, attr, value)
+        for key, value in kwargs.items():
+            setattr(self, key, value)
