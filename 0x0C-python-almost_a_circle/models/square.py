@@ -28,7 +28,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """assigns argument to each attribute"""
-        attributes = ['id', 'width', 'height', 'x', 'y']
+        attributes = ['id', 'size', 'x', 'y']
 
         for attr, value in zip(attributes, args):
             if value is not None:
