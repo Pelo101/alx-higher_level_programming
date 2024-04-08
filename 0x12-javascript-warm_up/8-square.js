@@ -8,12 +8,14 @@ if (isNaN(args[0])) {
   console.log('Misssing size');
 } else {
   const SquareSize = parseInt(args[0]);
-  let line = '';
 
   for (let i = 0; i < SquareSize; i++) {
-    line += SquareCharacter;
-  }
-  for (let j = 0; j < SquareSize; j++) {
+    let line = '';
+
+    for (let j = 0; j < SquareSize; j++) {
+      line += SquareCharacter;
+    }
+
     console.log(line);
   }
 }
