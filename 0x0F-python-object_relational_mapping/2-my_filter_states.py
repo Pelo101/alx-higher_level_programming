@@ -18,9 +18,9 @@ if __name__ == "__main__":
 
     query = "SELECT * FROM states WHERE name LIKE BINARY %s"
 
-    val_arg = (sys.argv[4],)
+    state_name  = (sys.argv[4],)
 
-    cursor.execute(query, val_arg)
+    cursor.execute(query, (state_name))
 
     states = cursor.fetchall()
 
