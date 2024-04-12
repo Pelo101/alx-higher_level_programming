@@ -8,21 +8,20 @@ import MySQLdb
 if __name__ == "__main__":
 
     mydb = MySQLdb.connect(
-           host="localhost",
-           port=3306,
-           user=sys.argv[1],
-           passwd=sys.argv[2],
-           db=sys.argv[3])
+        host="localhost",
+        port=3306,
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3])
 
-cursor = mydb.cursor()
+    cursor = mydb.cursor()
 
-cursor.execute("SELECT * FROM states WHERE name = %s", [sys.argv[4]])
+    cursor.execute("SELECT * FROM states WHERE name = %s", [sys.argv[4]])
 
-states = cursor.fetchall()
+    states = cursor.fetchall()
 
-for row in states:
-    print(row)
+    for row in states:
+        print(row)
 
-
-cursor.close()
-mydb.close()
+    cursor.close()
+    mydb.close()
