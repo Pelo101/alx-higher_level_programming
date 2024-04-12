@@ -16,12 +16,12 @@ if __name__ == "__main__":
 
     cursor = mydb.cursor()
 
-    cursor.execute(
-            "SELECT * "
-            "FROM states "
-            "WHERE name = '{}'  "
-            "ORDER BY id ASC".format(sys.argv[4])
-    )
+    name_arg = "SELECT * " \
+               "FROM states " \
+               "WHERE name = '{}'  " \
+               "ORDER BY id ASC".format(sys.argv[4])
+
+    cursor.execute(name_arg)
 
     states = cursor.fetchall()
 
