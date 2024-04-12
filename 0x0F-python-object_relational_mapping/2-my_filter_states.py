@@ -16,11 +16,12 @@ if __name__ == "__main__":
 
     cursor = mydb.cursor()
 
-    query = "SELECT * FROM states WHERE name LIKE BINARY %s"
-
-    state_name  = (sys.argv[4],)
-
-    cursor.execute(query, (state_name))
+    cursor.execute(
+            "SELECT * "
+            "FROM states "
+            "WHERE name = '{}'"
+            "ORDER BY id ASC".format(sys.argv[4])
+    )
 
     states = cursor.fetchall()
 
