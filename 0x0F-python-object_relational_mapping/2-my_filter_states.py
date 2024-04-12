@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     name_arg = "SELECT * " \
                "FROM states " \
-               "WHERE name = '{}'  " \
+               "WHERE BINARY name = '{}'  " \
                "ORDER BY id ASC".format(sys.argv[4])
 
     cursor.execute(name_arg)
