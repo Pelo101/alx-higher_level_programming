@@ -6,20 +6,20 @@ import sys
 
 if __name__ == "__main__":
 
-mydb = MySQLdb.connect(host="localhost",
-                       port=3306,
-                       user=sys.argv[1],
-                       passwd=sys.argv[2],
-                       db=sys.argv[3])
+    mydb = MySQLdb.connect(host="localhost",
+                           port=3306,
+                           user=sys.argv[1],
+                           passwd=sys.argv[2],
+                           db=sys.argv[3])
 
-cursor = mydb.cursor()
+    cursor = mydb.cursor()
 
-cursor.execute("SELECT id, name  FROM cities ORDER BY id")
+    cursor.execute("SELECT id, name  FROM cities ORDER BY id")
 
-cities = cursor.fetchall()
+    cities = cursor.fetchall()
 
-for city in cities:
-    print(city)
+    for city in cities:
+        print(city)
 
-cursor.close()
-mydb.close()
+    cursor.close()
+    mydb.close()
