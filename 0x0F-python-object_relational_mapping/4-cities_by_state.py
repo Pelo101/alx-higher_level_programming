@@ -14,10 +14,10 @@ if __name__ == "__main__":
 
     cursor = mydb.cursor()
 
-    cursor.execute("SELECT cities.id,
-                   cities.name,
-                   states.name FROM cities
-                   JOIN states on cities.state_id=states.id
+    cursor.execute("SELECT cities.id,\
+                   cities.name,\
+                   states.name FROM cities\
+                   JOIN states on cities.state_id=states.id\
                    ORDER BY  cities.id")
 
     cities = cursor.fetchall()
