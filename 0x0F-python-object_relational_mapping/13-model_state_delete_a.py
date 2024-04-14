@@ -1,4 +1,4 @@
-#!/usr / bin / python3
+#!/usr/bin/python3
 """ script that deletes all State objects with a name
     containing the letter a from the database hbtn_0e_6_usa"""
 
@@ -20,9 +20,9 @@ if __name__ == "__main__":
 
     Base.metadata.create_all(engine)
 
-    del = session.query(State).filter(State.name.like('%a%')).all():
+    delete_state = session.query(State).filter(State.name.like('%a%')).all():
 
-        for state in del:
+        for state in delete_state:
             session.delete(state)
 
     session.commit()
