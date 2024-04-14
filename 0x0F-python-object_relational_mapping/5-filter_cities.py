@@ -22,12 +22,11 @@ if __name__ == "__main__":
 
     states = cursor.fetchall()
 
-    i = ''
+    i = []
 
     for cities in states:
-        i += ','.join(cities) + ', '
-
-    print(i)
+        i.append(cities[0])
+    print(", ".join(i))
 
     cursor.close()
     mydb.close()
