@@ -6,7 +6,4 @@ function addMeMaybe(number, theFunction){
 	return theFunction(number);
 
 }
-
-module.exports = {
-   addMeMaybe: addMeMaybe
-};
+exports.addMeMaybe = addMeMaybe;
