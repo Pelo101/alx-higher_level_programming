@@ -5,7 +5,7 @@ const args = process.argv.slice(2);
 const SquareCharacter = 'X';
 
 if (isNaN(args[0])) {
-  console.log('Misssing size');
+  console.log('Missing size');
 } else {
   const SquareSize = parseInt(args[0]);
 
