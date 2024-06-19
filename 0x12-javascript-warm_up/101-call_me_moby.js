@@ -1,13 +1,8 @@
 #!/usr/bin/node
 // function that executes x times
 
-function callMeMoby (x, theFunction) {
+exports.callMeMoby = function (x, theFunction) {
   for (let i = 0; i < x; i++) {
     theFunction();
   }
-}
-
-module.exports = {
-
-  callMeMoby: callMeMoby
 };
