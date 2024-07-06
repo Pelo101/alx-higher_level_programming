@@ -8,5 +8,5 @@ if __name__ == "__main__":
     email = sys.argv[2]
 
     value = {"email": email}
-    response = request.post(url, data=value)
+    response = requests.post(url, data=value)
     print(response.text)
